@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "BUILD=dev vite",
-    "build": "tsc & BUILD=prod vite build",
+    "dev": "ENVIRONMENT=dev vite",
+    "build": "tsc & ENVIRONMENT=prod vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "typescript": "^4.6.3",
     "vite": "^2.9.5",
     "vite-plugin-environment": "^1.1.1",
-    "vite-plugin-eslint": "^1.5.2"
+    "vite-plugin-eslint": "^1.5.2",
+    "vite-plugin-html": "^3.2.0"
   }
 }
