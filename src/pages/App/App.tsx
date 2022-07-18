@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-const App = () => {
+export function App() {
   const [count, setCount] = useState(0);
 
   const increment = useCallback(() => {
@@ -8,15 +8,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <header className="App-header">
         <p>Hello Vite + React!</p>
-        <button type="button" onClick={increment}>
+        <button type="button" onClick={increment} data-testid="button">
           count is: {count}
         </button>
       </header>
     </div>
   );
-};
-
-export default App;
+}
