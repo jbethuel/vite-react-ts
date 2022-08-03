@@ -15,7 +15,8 @@
   "extends": [
     "react-app",
     "react-app/jest",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
