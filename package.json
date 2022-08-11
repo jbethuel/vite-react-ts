@@ -7,8 +7,10 @@
     "build": "tsc & ENVIRONMENT=prod vite build",
     "preview": "vite preview",
     "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:run": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "e2e:run": "playwright test",
+    "e2e:report": "playwright show-report"
   },
   "dependencies": {
     "path-parser": "^6.1.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
+    "@playwright/test": "^1.25.0",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
