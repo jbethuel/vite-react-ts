@@ -16,7 +16,7 @@ jobs:
         run: yarn install
 
       - name: Setup dependencies
-        run: npx playwright install
+        run: npx playwright install --with-deps
 
       - name: Lint
         run: yarn lint
