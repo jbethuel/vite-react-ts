@@ -6,7 +6,7 @@ env:
   ENVIRONMENT: dev
 
 jobs:
-  dashboard_job:
+  webapp_job:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
