@@ -1,1 +1,1 @@
-export { App } from './App';
+export { App, appTestId, buttonTestId, greetingTestId } from './App';

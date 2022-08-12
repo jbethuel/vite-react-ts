@@ -4,6 +4,10 @@ interface AppProps {
   name?: string;
 }
 
+export const appTestId = 'app';
+export const greetingTestId = 'greeting-text';
+export const buttonTestId = 'increment-button';
+
 export function App(props: AppProps) {
   const { name } = props;
 
@@ -24,12 +28,16 @@ export function App(props: AppProps) {
   }, [name]);
 
   return (
-    <div className="App" data-testid="app">
-      <header className="App-header">
-        <p>{renderGreeting}</p>
-        <button type="button" onClick={increment} data-testid="button">
-          count is: {count}
-        </button>
+    <div data-testid={appTestId}>
+      <header>
+        <div>
+          <p data-testid={greetingTestId}>{renderGreeting}</p>
+        </div>
+        <div>
+          <button type="button" onClick={increment} data-testid={buttonTestId}>
+            count is: {count}
+          </button>
+        </div>
       </header>
     </div>
   );

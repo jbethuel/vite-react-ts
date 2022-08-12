@@ -1,0 +1,25 @@
+name: Check and build
+
+on: push
+
+env:
+  ENVIRONMENT: dev
+
+jobs:
+  dashboard_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test:run && yarn e2e:run
+
+      - name: Build
+        run: yarn build:${{ env.ENVIRONMENT }}
