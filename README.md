@@ -2,7 +2,7 @@
 
 Sample repo of using Vite with React
 
-### Tools
+### Technologies
 
 - [React 18](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
@@ -11,3 +11,7 @@ Sample repo of using Vite with React
 - [Jest](https://jestjs.io/) - Testing specs
 - [Storybook](https://storybook.js.org/) - Testing UI components & pages in isolation
 - [Playwright](https://playwright.dev/) - End to end testing
+
+### Links
+- [https://react-tech-stack.jbethuel.com](https://react-tech-stack.jbethuel.com)
+- [https://react-tech-stack-storybook.jbethuel.com](https://react-tech-stack-storybook.jbethuel.com)
