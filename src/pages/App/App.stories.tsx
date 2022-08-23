@@ -8,8 +8,8 @@ export default {
 
 const Template: ComponentStory<typeof App> = (props) => <App {...props} />;
 
-export const FirstStory = Template.bind({});
+export const SimpleCounter = Template.bind({});
 
-FirstStory.args = {
+SimpleCounter.args = {
   name: 'Default',
 };

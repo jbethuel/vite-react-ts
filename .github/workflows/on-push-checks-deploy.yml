@@ -32,4 +32,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages publish dist --project-name react-tech-stack
+          command: |
+            pages publish dist --project-name react-tech-stack &&
+            pages publish storybook-static --project-name react-tech-stack-storybook
