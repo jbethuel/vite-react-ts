@@ -24,14 +24,22 @@ jobs:
       - name: Test
         run: yarn test:run && yarn e2e:run
 
-      - name: Build
+      - name: Build App
         run: yarn build:${{ env.ENVIRONMENT }}
 
-      - name: Deploy
+      - name: Build Storybook
+        run: sudo yarn storybook:build # running sudo here because of permissions issues
+
+      - name: Deploy App
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: |
-            pages publish dist --project-name react-tech-stack &&
-            pages publish storybook-static --project-name react-tech-stack-storybook
+          command: pages publish dist --project-name react-tech-stack
+
+      - name: Deploy Storybook
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages publish storybook-static --project-name react-tech-stack-storybook
