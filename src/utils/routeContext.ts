@@ -15,7 +15,7 @@ const buildQueryString = (queryParams: object) => {
   return `?${stringify(queryParams)}`;
 };
 
-export const routeContext = <P, Q>(path: string) => ({
+export const routeContext = <P extends object, Q extends object>(path: string) => ({
   path,
   url: (args: { params: P; query: Q }) => {
     const { params, query } = args;
